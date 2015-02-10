@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 import javax.swing.*;
 
-//ticTacToe
 public class TicTacToe extends JFrame implements ActionListener {
 
 	static int[][] gameDataBase = PlayerFirst.dataBase;
@@ -103,12 +102,18 @@ public class TicTacToe extends JFrame implements ActionListener {
 	}
 
 	public static void newGame(int gameType) {
+		turnCount = 0;
+		turnNumber = 1;
 		System.out.println("newGame()");
 		if (gameType == PLAYERX) {
 			gameDataBase = PlayerFirst.dataBase;
+			playerTurn = true;
 			System.out.println("Set DataBase Player X");
 		} else if (gameType == PLAYERO) {
+			playerTurn = false;
 			gameDataBase = CompFirst.dataBase;
+			rotateInitialized = true;
+			rotationConstant = NONE;
 			System.out.println("Set DataBase Player O");
 		}
 		rotateInitialized = false;
@@ -122,6 +127,9 @@ public class TicTacToe extends JFrame implements ActionListener {
 		for (int i = 1; i < 10; i++) {
 			TicTacToe.buttonString[i] = "-";
 			TicTacToe.button[i].setText(TicTacToe.buttonString[i]);
+		}
+		if (gameType == PLAYERO) {
+			compTurn();
 		}
 	}
 
@@ -273,31 +281,53 @@ public class TicTacToe extends JFrame implements ActionListener {
 
 	public static void compTurn() {
 		arrayTestNumber = 0;
-		int[] tempGameArray = new int[turnNumber-1];
-		int[] tempDataBaseArray = new int[turnNumber-1];
+		computerMoveInteger = 0;
+		int[] tempGameArray = new int[turnNumber - 1];
+		int[] tempDataBaseArray = new int[turnNumber - 1];
 		foundMatch = false;
-		tempGameArray = Arrays.copyOf(game, turnNumber-1);
+		tempGameArray = Arrays.copyOf(game, turnNumber - 1);
 		Object[] tempGameArray2 = { tempGameArray };
-		while (!foundMatch) {
-			System.out.println("TestingArray " + arrayTestNumber);
-			for (int x = 0; x < turnNumber - 1; x++) {
-				System.out.println("Setting tempDataBaseArray[" + x + "] to" + gameDataBase[arrayTestNumber][x]);
-				tempDataBaseArray[x] = gameDataBase[arrayTestNumber][x];
+		if (!(turnNumber == 1)) {
+			while (!foundMatch) {
+				System.out.println("TestingArray " + arrayTestNumber);
+				for (int x = 0; x < turnNumber - 1; x++) {
+					System.out.println("Setting tempDataBaseArray[" + x
+							+ "] to" + gameDataBase[arrayTestNumber][x]);
+					tempDataBaseArray[x] = gameDataBase[arrayTestNumber][x];
+				}
+				Object[] tempDataBaseArray2 = { tempDataBaseArray };
+				if (Arrays.deepEquals(tempGameArray2, tempDataBaseArray2)) {
+					computerMoveInteger = gameDataBase[arrayTestNumber][turnNumber - 1];
+					foundMatch = true;
+				}
+				arrayTestNumber++;
 			}
-			Object[] tempDataBaseArray2 = { tempDataBaseArray };
-			if (Arrays.deepEquals(tempGameArray2, tempDataBaseArray2)) {
-				computerMoveInteger = gameDataBase[arrayTestNumber][turnNumber];
-				foundMatch = true;
-			}
-			arrayTestNumber++;
+		} else {
+			computerMoveInteger = 1;
 		}
-		game[turnNumber - 2] = computerMoveInteger;
+		game[turnNumber - 1] = computerMoveInteger;
 		rotatedComputerMoveInteger = outputBoardRotation(computerMoveInteger);
 		buttonString[rotatedComputerMoveInteger] = turnChar();
 		button[rotatedComputerMoveInteger]
 				.setText(buttonString[rotatedComputerMoveInteger]);
 		turnNumber++;
 		playerTurn = true;
+		switch (checkWin()) {
+		case XWIN:
+			gameOver = true;
+			display.setText("Nice Job Xs! You Win!");
+			break;
+		case OWIN:
+			gameOver = true;
+			display.setText("Nice Job Os! You Win!");
+			break;
+		case NOWIN:
+			break;
+		case TIE:
+			gameOver = true;
+			display.setText("You Tied! Play Again!");
+			break;
+		}
 	}
 
 	public static void turn(int buttonNum) {
@@ -327,7 +357,7 @@ public class TicTacToe extends JFrame implements ActionListener {
 				break;
 			case OWIN:
 				gameOver = true;
-				display.setText("Nice Job Xs! You Win!");
+				display.setText("Nice Job Os! You Win!");
 				break;
 			case NOWIN:
 				break;
@@ -339,7 +369,9 @@ public class TicTacToe extends JFrame implements ActionListener {
 			turnNumber++;
 			playerTurn = false;
 			System.out.println("CompTurn()");
-			compTurn();
+			if (!gameOver) {
+				compTurn();
+			}
 		}
 	}
 
