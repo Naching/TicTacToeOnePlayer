@@ -52,6 +52,54 @@ public class PlayerFirst {
 	public static int[] Corner35 = { 1, 5, 9, 2, 8, 7, 3, 6, 4 };
 	public static int[] Corner48 = { 1, 5, 9, 2, 8, 7, 4, 3, 0 };
 	public static int[] Corner49 = { 1, 5, 9, 2, 8, 7, 6, 3, 0 };
+	
+	//center first
+	public static int[] Center1 = {5,1,2,8,3,7};
+	public static int[] Center8 = {5,1,2,8,4,6};
+	public static int[] Center9 = {5,1,2,8,6,4};
+	public static int[] Center10 = {5,1,2,8,7,3};
+	public static int[] Center11 = {5,1,2,8,9,4};
+
+	public static int[] Center2 = {5,1,3,7,2,4,0,0,0};
+	public static int[] Center12 = {5,1,3,7,4};
+	public static int[] Center13 = {5,1,3,7,6,4,0,0,0};
+	public static int[] Center14 = {5,1,3,7,8,4,0,0,0};
+	public static int[] Center15 = {5,1,3,7,9,4,0,0,0};
+
+	public static int[] Center3 = {5,1,4,6,2,8};
+	public static int[] Center16 = {5,1,4,6,3,7};
+	public static int[] Center17 = {5,1,4,6,7,3};
+	public static int[] Center18 = {5,1,4,6,8,2};
+	public static int[] Center19 = {5,1,4,6,9,2};
+
+	public static int[] Center4 = {5,1,6,4,2,7,0,0,0};
+	public static int[] Center20 = {5,1,6,4,3,7,0,0,0};
+	public static int[] Center21 = {5,1,6,4,7,3};
+	public static int[] Center22 = {5,1,6,4,8,7,0,0,0};
+	public static int[] Center23 = {5,1,6,4,9,7,0,0,0};
+
+	public static int[] Center5 = {5,1,7,3,2,8};
+	public static int[] Center24 = {5,1,7,3,4,2,0,0,0};
+	public static int[] Center25 = {5,1,7,3,6,2,0,0,0};
+	public static int[] Center26 = {5,1,7,3,8,2,0,0,0};
+	public static int[] Center27 = {5,1,7,3,9,2,0,0,0};
+
+	public static int[] Center6 = {5,1,8,2,3,7};
+	public static int[] Center28 = {5,1,8,2,4,3,0,0,0};
+	public static int[] Center29 = {5,1,8,2,6,3,0,0,0};
+	public static int[] Center30 = {5,1,8,2,7,3,0,0,0};
+	public static int[] Center31 = {5,1,8,2,9,3,0,0,0};
+
+	public static int[] Center7 = {5,1,9,7,2,4,0,0,0};
+	public static int[] Center32 = {5,1,9,7,3,4,0,0,0};
+	public static int[] Center33 = {5,1,9,7,4,6};
+	public static int[] Center34 = {5,1,9,7,6,4,0,0,0};
+	public static int[] Center35 = {5,1,9,7,8,4,0,0,0};
+
+
+	
+	//edge first
+	public static int[] Edge1 = {};
 
 	public static int[][] dataBase = { Corner1, Corner2, Corner3, Corner4,
 			Corner5, Corner6, Corner7, Corner8, Corner9, Corner10, Corner11,

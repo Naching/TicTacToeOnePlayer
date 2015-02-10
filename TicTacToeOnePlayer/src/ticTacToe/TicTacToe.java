@@ -3,11 +3,13 @@ package ticTacToe;
 import java.awt.event.*;
 import java.awt.*;
 import java.util.Arrays;
+import java.util.Random;
 
 import javax.swing.*;
 
 public class TicTacToe extends JFrame implements ActionListener {
 
+	static Random rand = new Random();
 	static int[][] gameDataBase = PlayerFirst.dataBase;
 	static boolean foundMatch = false;
 	static int computerMoveInteger;
@@ -113,7 +115,7 @@ public class TicTacToe extends JFrame implements ActionListener {
 			playerTurn = false;
 			gameDataBase = CompFirst.dataBase;
 			rotateInitialized = true;
-			rotationConstant = NONE;
+			rotationConstant = rand.nextInt(4) + 1;
 			System.out.println("Set DataBase Player O");
 		}
 		rotateInitialized = false;
@@ -291,8 +293,7 @@ public class TicTacToe extends JFrame implements ActionListener {
 			while (!foundMatch) {
 				System.out.println("TestingArray " + arrayTestNumber);
 				for (int x = 0; x < turnNumber - 1; x++) {
-					System.out.println("Setting tempDataBaseArray[" + x
-							+ "] to" + gameDataBase[arrayTestNumber][x]);
+					//System.out.println("Setting tempDataBaseArray[" + x + "] to" + gameDataBase[arrayTestNumber][x]);
 					tempDataBaseArray[x] = gameDataBase[arrayTestNumber][x];
 				}
 				Object[] tempDataBaseArray2 = { tempDataBaseArray };
