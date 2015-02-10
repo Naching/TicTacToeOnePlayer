@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import javax.swing.*;
 
+//ticTacToe
 public class TicTacToe extends JFrame implements ActionListener {
 
 	static int[][] gameDataBase = PlayerFirst.dataBase;
