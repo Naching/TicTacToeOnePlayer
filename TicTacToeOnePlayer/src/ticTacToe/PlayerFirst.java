@@ -52,53 +52,74 @@ public class PlayerFirst {
 	public static int[] Corner35 = { 1, 5, 9, 2, 8, 7, 3, 6, 4 };
 	public static int[] Corner48 = { 1, 5, 9, 2, 8, 7, 4, 3, 0 };
 	public static int[] Corner49 = { 1, 5, 9, 2, 8, 7, 6, 3, 0 };
-	
-	//center first
-	public static int[] Center1 = {5,1,2,8,3,7};
-	public static int[] Center8 = {5,1,2,8,4,6};
-	public static int[] Center9 = {5,1,2,8,6,4};
-	public static int[] Center10 = {5,1,2,8,7,3};
-	public static int[] Center11 = {5,1,2,8,9,4};
 
-	public static int[] Center2 = {5,1,3,7,2,4,0,0,0};
-	public static int[] Center12 = {5,1,3,7,4};
-	public static int[] Center13 = {5,1,3,7,6,4,0,0,0};
-	public static int[] Center14 = {5,1,3,7,8,4,0,0,0};
-	public static int[] Center15 = {5,1,3,7,9,4,0,0,0};
+	public static int[] Center1 = { 5, 1, 2, 8, 3, 7, 4, 9, 0 };
+	public static int[] Center36 = { 5, 1, 2, 8, 3, 7, 9, 4, 0 };
+	public static int[] Center37 = { 5, 1, 2, 8, 3, 7, 6, 4, 0 };
+	public static int[] Center8 = { 5, 1, 2, 8, 4, 6, 3, 7, 9 };
+	public static int[] Center38 = { 5, 1, 2, 8, 4, 6, 7, 3, 9 };
+	public static int[] Center39 = { 5, 1, 2, 8, 4, 6, 9, 3, 7 };
+	public static int[] Center9 = { 5, 1, 2, 8, 6, 4, 3, 7, 0 };
+	public static int[] Center40 = { 5, 1, 2, 8, 6, 4, 9, 3, 7 };
+	public static int[] Center41 = { 5, 1, 2, 8, 6, 4, 7, 3, 9 };
+	public static int[] Center10 = { 5, 1, 2, 8, 7, 3, 4, 6, 9 };
+	public static int[] Center42 = { 5, 1, 2, 8, 7, 3, 6, 4, 9 };
+	public static int[] Center43 = { 5, 1, 2, 8, 7, 3, 9, 4, 6 };
+	public static int[] Center11 = { 5, 1, 2, 8, 9, 4, 3, 7, 0 };
+	public static int[] Center44 = { 5, 1, 2, 8, 9, 4, 6, 7, 0 };
+	public static int[] Center45 = { 5, 1, 2, 8, 9, 4, 7, 3, 6 };
+	public static int[] Center2 = { 5, 1, 3, 7, 2, 4, 0, 0, 0 };
+	public static int[] Center12 = { 5, 1, 3, 7, 4, 6, 2, 8, 9 };
+	public static int[] Center46 = { 5, 1, 3, 7, 4, 6, 8, 2, 9 };
+	public static int[] Center47 = { 5, 1, 3, 7, 4, 6, 9, 2, 8 };
+	public static int[] Center13 = { 5, 1, 3, 7, 6, 4, 0, 0, 0 };
+	public static int[] Center14 = { 5, 1, 3, 7, 8, 4, 0, 0, 0 };
+	public static int[] Center15 = { 5, 1, 3, 7, 9, 4, 0, 0, 0 };
+	public static int[] Center3 = { 5, 1, 4, 6, 2, 8, 3, 7, 9 };
+	public static int[] Center48 = { 5, 1, 4, 6, 2, 8, 7, 3, 9 };
+	public static int[] Center49 = { 5, 1, 4, 6, 2, 8, 9, 3, 7 };
+	public static int[] Center16 = { 5, 1, 4, 6, 3, 7, 2, 8, 9 };
+	public static int[] Center50 = { 5, 1, 4, 6, 3, 7, 8, 2, 9 };
+	public static int[] Center51 = { 5, 1, 4, 6, 3, 7, 9, 2, 8 };
+	public static int[] Center17 = { 5, 1, 4, 6, 7, 3, 9, 8, 2 };
+	public static int[] Center52 = { 5, 1, 4, 6, 7, 3, 8, 9, 0 };
+	public static int[] Center53 = { 5, 1, 4, 6, 7, 3, 2, 9, 0 };
+	public static int[] Center18 = { 5, 1, 4, 6, 8, 2, 3, 7, 9 };
+	public static int[] Center54 = { 5, 1, 4, 6, 8, 2, 7, 3, 0 };
+	public static int[] Center55 = { 5, 1, 4, 6, 8, 2, 9, 3, 0 };
+	public static int[] Center19 = { 5, 1, 4, 6, 9, 3, 2, 8, 7 };
+	public static int[] Center56 = { 5, 1, 4, 6, 9, 3, 7, 2, 0 };
+	public static int[] Center57 = { 5, 1, 4, 6, 9, 3, 8, 2, 0 };
+	public static int[] Center4 = { 5, 1, 6, 4, 2, 7, 0, 0, 0 };
+	public static int[] Center20 = { 5, 1, 6, 4, 3, 7, 0, 0, 0 };
+	public static int[] Center21 = { 5, 1, 6, 4, 7, 3, 2, 8, 9 };
+	public static int[] Center58 = { 5, 1, 6, 4, 7, 3, 8, 2, 0 };
+	public static int[] Center59 = { 5, 1, 6, 4, 7, 3, 9, 2, 0 };
+	public static int[] Center22 = { 5, 1, 6, 4, 8, 7, 0, 0, 0 };
+	public static int[] Center23 = { 5, 1, 6, 4, 9, 7, 0, 0, 0 };
+	public static int[] Center5 = { 5, 1, 7, 3, 2, 8, 4, 6, 9 };
+	public static int[] Center60 = { 5, 1, 7, 3, 2, 8, 6, 4, 9 };
+	public static int[] Center61 = { 5, 1, 7, 3, 2, 8, 9, 4, 6 };
+	public static int[] Center24 = { 5, 1, 7, 3, 4, 2, 0, 0, 0 };
+	public static int[] Center25 = { 5, 1, 7, 3, 6, 2, 0, 0, 0 };
+	public static int[] Center26 = { 5, 1, 7, 3, 8, 2, 0, 0, 0 };
+	public static int[] Center27 = { 5, 1, 7, 3, 9, 2, 0, 0, 0 };
+	public static int[] Center6 = { 5, 1, 8, 2, 3, 7, 4, 6, 9 };
+	public static int[] Center62 = { 5, 1, 8, 2, 3, 7, 6, 4, 9 };
+	public static int[] Center63 = { 5, 1, 8, 2, 3, 7, 9, 6, 4 };
+	public static int[] Center28 = { 5, 1, 8, 2, 4, 3, 0, 0, 0 };
+	public static int[] Center29 = { 5, 1, 8, 2, 6, 3, 0, 0, 0 };
+	public static int[] Center30 = { 5, 1, 8, 2, 7, 3, 0, 0, 0 };
+	public static int[] Center31 = { 5, 1, 8, 2, 9, 3, 0, 0, 0 };
+	public static int[] Center7 = { 5, 1, 9, 7, 2, 4, 0, 0, 0 };
+	public static int[] Center32 = { 5, 1, 9, 7, 3, 4, 0, 0, 0 };
+	public static int[] Center33 = { 5, 1, 9, 7, 4, 6, 2, 8, 3 };
+	public static int[] Center64 = { 5, 1, 9, 7, 4, 6, 3, 2, 8 };
+	public static int[] Center65 = { 5, 1, 9, 7, 4, 6, 8, 2, 3 };
+	public static int[] Center34 = { 5, 1, 9, 7, 6, 4, 0, 0, 0 };
+	public static int[] Center35 = { 5, 1, 9, 7, 8, 4, 0, 0, 0 };
 
-	public static int[] Center3 = {5,1,4,6,2,8};
-	public static int[] Center16 = {5,1,4,6,3,7};
-	public static int[] Center17 = {5,1,4,6,7,3};
-	public static int[] Center18 = {5,1,4,6,8,2};
-	public static int[] Center19 = {5,1,4,6,9,2};
-
-	public static int[] Center4 = {5,1,6,4,2,7,0,0,0};
-	public static int[] Center20 = {5,1,6,4,3,7,0,0,0};
-	public static int[] Center21 = {5,1,6,4,7,3};
-	public static int[] Center22 = {5,1,6,4,8,7,0,0,0};
-	public static int[] Center23 = {5,1,6,4,9,7,0,0,0};
-
-	public static int[] Center5 = {5,1,7,3,2,8};
-	public static int[] Center24 = {5,1,7,3,4,2,0,0,0};
-	public static int[] Center25 = {5,1,7,3,6,2,0,0,0};
-	public static int[] Center26 = {5,1,7,3,8,2,0,0,0};
-	public static int[] Center27 = {5,1,7,3,9,2,0,0,0};
-
-	public static int[] Center6 = {5,1,8,2,3,7};
-	public static int[] Center28 = {5,1,8,2,4,3,0,0,0};
-	public static int[] Center29 = {5,1,8,2,6,3,0,0,0};
-	public static int[] Center30 = {5,1,8,2,7,3,0,0,0};
-	public static int[] Center31 = {5,1,8,2,9,3,0,0,0};
-
-	public static int[] Center7 = {5,1,9,7,2,4,0,0,0};
-	public static int[] Center32 = {5,1,9,7,3,4,0,0,0};
-	public static int[] Center33 = {5,1,9,7,4,6};
-	public static int[] Center34 = {5,1,9,7,6,4,0,0,0};
-	public static int[] Center35 = {5,1,9,7,8,4,0,0,0};
-
-
-	
-	//edge first
+	// edge first
 	public static int[] Edge1 = {};
 
 	public static int[][] dataBase = { Corner1, Corner2, Corner3, Corner4,
@@ -109,6 +130,16 @@ public class PlayerFirst {
 			Corner30, Corner31, Corner32, Corner33, Corner34, Corner35,
 			Corner36, Corner37, Corner38, Corner39, Corner40, Corner41,
 			Corner42, Corner43, Corner44, Corner45, Corner46, Corner47,
-			Corner48, Corner49 };
+			Corner48, Corner49, Center1, Center2, Center3, Center4, Center5,
+			Center6, Center7, Center8, Center9, Center10, Center11, Center12,
+			Center13, Center14, Center15, Center16, Center17, Center18,
+			Center19, Center20, Center21, Center22, Center23, Center24,
+			Center25, Center26, Center27, Center28, Center29, Center30,
+			Center31, Center32, Center33, Center34, Center35, Center36,
+			Center37, Center38, Center39, Center40, Center41, Center42,
+			Center43, Center44, Center45, Center46, Center47, Center48,
+			Center49, Center50, Center51, Center52, Center53, Center54,
+			Center55, Center56, Center57, Center58, Center59, Center60,
+			Center61, Center62, Center63, Center64, Center65 };
 
 }

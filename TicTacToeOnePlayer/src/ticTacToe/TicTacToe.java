@@ -282,6 +282,13 @@ public class TicTacToe extends JFrame implements ActionListener {
 	}
 
 	public static void compTurn() {
+		if (display.getText().equals("X's Turn!")) {
+			System.out.println("Set Text O Turn");
+			display.setText("O's Turn!");
+		} else if (display.getText().equals("O's Turn!")) {
+			System.out.println("Set Text X Turn");
+			display.setText("X's Turn!");
+		}
 		arrayTestNumber = 0;
 		computerMoveInteger = 0;
 		int[] tempGameArray = new int[turnNumber - 1];
@@ -293,7 +300,8 @@ public class TicTacToe extends JFrame implements ActionListener {
 			while (!foundMatch) {
 				System.out.println("TestingArray " + arrayTestNumber);
 				for (int x = 0; x < turnNumber - 1; x++) {
-					//System.out.println("Setting tempDataBaseArray[" + x + "] to" + gameDataBase[arrayTestNumber][x]);
+					// System.out.println("Setting tempDataBaseArray[" + x +
+					// "] to" + gameDataBase[arrayTestNumber][x]);
 					tempDataBaseArray[x] = gameDataBase[arrayTestNumber][x];
 				}
 				Object[] tempDataBaseArray2 = { tempDataBaseArray };
@@ -392,9 +400,14 @@ public class TicTacToe extends JFrame implements ActionListener {
 
 	public static int boardRotation(int input) {
 		if (!rotateInitialized) {
-			if (input == 1 || input == 2 || input == 5) {
+			if (input == 1 || input == 2) {
 				rotationConstant = NONE;
 				rotateInitialized = true;
+			}
+			if (input == 5) {
+				rotationConstant = rand.nextInt(4) + 1;
+				rotateInitialized = true;
+
 			}
 			if (input == 3 || input == 6) {
 				rotationConstant = CLOCKWISE;
